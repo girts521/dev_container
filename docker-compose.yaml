@@ -3,11 +3,7 @@ services:
     build: .
     image: dev-setup
     volumes:
-      - ${SSH_AUTH_SOCK}:/tmp/ssh-agent.sock
-    environment:
-      - SSH_AUTH_SOCK=/tmp/ssh-agent.sock
-      - GITHUB_USERNAME=girts521
-    # network_mode: host
+      - /home/girts/:$HOME
     stdin_open: true
     tty: true
 
