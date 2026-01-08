@@ -17,7 +17,7 @@ RUN git clone https://github.com/girts521/dotfiles.git
 RUN ln -sf ~/dotfiles/.zshrc ~/.zshrc
 RUN mkdir .config
 RUN ln -sf ~/dotfiles/.config/nvim ~/.config/nvim
-
+RUN ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
 # Set default command to bash
 CMD ["/bin/zsh"]
