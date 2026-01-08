@@ -6,6 +6,7 @@ services:
       - /home/girts/Documents:/home/devuser/Documents
       - /home/girts/Desktop:/home/devuser/Desktop
       - /home/girts/Downloads:/home/devuser/Downloads
+      - /home/girts/.ssh:/home/devuser/.ssh:ro
     stdin_open: true
     tty: true
 
