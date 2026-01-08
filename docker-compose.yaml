@@ -1,9 +1,11 @@
 services:
   dev:
     build: .
-    image: dev-setup
+    image: dev
     volumes:
-      - /home/girts/:$HOME
+      - /home/girts/Documents:/home/devuser/Documents
+      - /home/girts/Desktop:/home/devuser/Desktop
+      - /home/girts/Downloads:/home/devuser/Downloads
     stdin_open: true
     tty: true
 
