@@ -1,7 +1,11 @@
 FROM archlinux:latest
 
 RUN  pacman -Syu --noconfirm &&  pacman -S --noconfirm sudo curl git vim  neovim zsh wget openssh \
-      bat btop zoxide eza tmux 
+      bat btop zoxide eza tmux base-devel bw jq \
+    clang cmake gdb valgrind less mesa libglvnd glu \
+    libx11 libxrandr libxinerama libxcursor libxi \
+    libxcomposite libxdamage libxext libxfixes \
+    libxrender libxkbcommon xorgproto
 
 RUN useradd -m -G wheel -s /bin/bash devuser && \
     echo "devuser ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
